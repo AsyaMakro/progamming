@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int stp (int a, int b)
+{
+int c=b;
+int d=1;
+
+while (c!=0)
+{
+d=d*a;
+c--;
+}
+return d*b;
+}
+
+void mas (int m[], int e)
+{
+int t;
+
+cout«"Массив коэффициентов n: ";
+for (t=0; t<e; t++)
+{
+m[t]=e-t;
+cout«m[t]«" ";
+}
+cout«endl;
+}
+
+int main()
+{
+int n;
+int x;
+int l;
+int sum=0;
+
+cout«"X = ";
+cin»x;
+
+cout«"N = ";
+cin»n;
+cout«endl;
+
+int z[n];
+
+mas (z,n);
+cout«endl;
+
+for (l=0; l<n; l++)
+{
+sum+=stp(x,z[l]);
+}
+
+cout«"Значение многочлена = "«sum«endl;
+
+return 0;
+}
